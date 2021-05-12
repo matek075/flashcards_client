@@ -1,0 +1,22 @@
+.input {
+    width: 70%;
+    text-align: center;
+    height: 30px;
+    border: none;
+    background-color: #343434;
+  border-bottom: 2px solid white;
+    &:hover {
+        border: 2px solid #ffd600;
+        border-radius: 10px;
+    }
+    &:focus {
+        outline: none;
+        border: 2px solid #ffd600;
+        border-radius: 10px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .input{
+        font-size: larger;
+    }
+}

@@ -1,0 +1,29 @@
+.btn {
+    background: #343434;
+    border: 3px solid #ffd600;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 34px;
+    width: 12vw;
+    height: 6vh;
+    font-size: 100%;
+    color: white;
+    outline:none;
+}
+.btn:active,.btn:focus{
+    outline: none;
+}
+.btn:hover {
+    cursor: pointer;
+    background: #ffd600;
+    border: 2px solid rgb(255, 166, 0);
+    color: black;
+    -webkit-tap-highlight-color: transparent;
+}
+@media only screen and (max-width: 600px){
+    .btn{
+        width: 28vw;
+        height: 10vh;
+        font-size: large;
+    }
+}

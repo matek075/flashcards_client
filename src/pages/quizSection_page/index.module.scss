@@ -1,0 +1,42 @@
+.sectionCard {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(209, 203, 203, 0.1);
+    width: 20vw;
+    height: 48vh;
+    margin: 10px;
+    border-radius: 10px;
+    float: left;
+    overflow-y: auto;
+    filter: drop-shadow(0px 4px 4px rgba(73, 72, 72, 0.25));
+  }
+  .listItem {
+    margin-top: 2vh;
+    font-size: 24px;
+    color: white;
+    width: 90%;
+    padding: 1vw;
+    border-radius: 10%;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    list-style-type: "👉";
+  }
+  .title {
+    margin: 10px;
+    color: #4C9CE5;
+    font-size: 25px;
+    line-height: 35px;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    &:hover {
+      cursor: pointer;
+      color: #0084ff;
+      font-weight: bolder;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .sectionCard {
+      width: 70vw;
+    }
+  }
+  

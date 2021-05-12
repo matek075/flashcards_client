@@ -1,0 +1,21 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    width: 40vw;
+    border: 4px solid #ffd600;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 20vh;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px){
+    .form{
+        margin-top: 2vh;
+        width: 80vw;
+        height: 85vh;
+    }
+}

@@ -1,0 +1,26 @@
+.verticalBar {
+    position: center;
+    justify-content: center;
+    height: 100vh;
+    width: 12vw;
+    float: left;
+    border: 0.2 solid black;
+    background-color: #ffd600;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.icon {
+   margin-top: 1vh;
+    height: 80%;
+    color: #343434;
+    width: 80%;
+}
+.questionIcon{
+    color: blue;
+}
+@media only screen and (max-width: 600px) {
+    .verticalBar {
+        width: 24vw;
+    }
+}

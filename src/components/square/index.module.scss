@@ -1,0 +1,19 @@
+.base {
+    display: flex;
+    justify-content: center;
+    width:8vw;
+    height: 80px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 5vh;
+    &:hover {
+        background-color: grey;
+        border: 1px solid red;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .base {
+        width: 17vw;
+    }
+}
