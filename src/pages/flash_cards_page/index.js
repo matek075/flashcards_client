@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import styles from './index.module.scss';
 import FlashCardsApi from '../../utils/flashCardsApi';
 import FlashCardContainer from '../../components/flash_card_container';
 import Background from '../../components/background';
@@ -31,6 +32,7 @@ const FlashCardsPage = () => {
     return (
       <Background width="100%">
         <Header text={`Welcome in ${languageType} section`} />
+        <span className={styles.backText} onClick={()=>window.history.back()}><span role="img" aria-label="back">◀️</span> powrot</span>
         <FlashCardContainer flashCardCollection={data} />
       </Background>
     );

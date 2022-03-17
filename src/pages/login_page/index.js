@@ -97,7 +97,7 @@ const LoginPage = props => {
             onClose={() => setAlert('')}
           ></AlertComponent>
         ) : null}
-        {state.spinner == true && (
+        {state.spinner === true && (
           <Spinner animation="border" variant="primary" />
         )}
       </Form>

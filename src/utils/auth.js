@@ -17,9 +17,6 @@ export default class Auth{
         let token = this.getToken()
         if(!this.tokenExist()) return false
         let decoded = decode(token)
-        console.log(token)
-        console.log("token exp: " + decoded.exp)
-        console.log("Date now exp: " + (Date.now() / 1000))
         if(decoded.exp > (Date.now() / 1000))
             return true
         else

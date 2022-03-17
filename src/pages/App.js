@@ -29,18 +29,16 @@ const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (Auth.isTokenActive()) {
-      console.log('token aktywny');
       dispatch(setUserLogged());
       let userId = Auth.getUserId();
       UserApi.fetchOneUser(userId).then(data => {
         if (data.succes) {
           dispatch(setUserIsAdmin(data.user.isAdmin));
           dispatch(setUserData(data.user));
-        } else console.log('nie znaleziono uzytkownika');
+        }
       });
-    } else {
-      console.log('token NIE aktywny');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   let getPublicRoutes = () =>

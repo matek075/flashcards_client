@@ -143,7 +143,6 @@ export default class UsersApi{
   })
   .then(res =>{
     if(res.ok){
-      console.log(res)
         return res.json()
     }else{
       reject({message:'Błąd - status: ' + res.status})

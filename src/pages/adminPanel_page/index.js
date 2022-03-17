@@ -127,7 +127,7 @@ const AdminPage = () => {
         {
           state.created ? createdFlashCard() : null
         }
-        {state.spinner == true && (
+        {state.spinner === true && (
           <Spinner animation="border" variant="primary" />
         )}
       </Form>

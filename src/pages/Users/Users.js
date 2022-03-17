@@ -15,7 +15,6 @@ const Users = () => {
         }
       })
       .then(data => {
-        console.log(data);
         setUsers(data.users);
       });
   }, []);

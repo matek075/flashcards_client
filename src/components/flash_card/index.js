@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from '../button/';
 import styles from './index.module.scss';
 
 const FlashCard = ({ card }) => {
