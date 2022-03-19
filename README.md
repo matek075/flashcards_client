@@ -2,6 +2,7 @@
 
 ## Table of contents
 * [General info](#general-info)
+* [Live](#live-app)
 * [Project Setup](#project-setup)
 * [How to use](#how-to-use)
 * [Technologies](#technologies)
@@ -12,10 +13,15 @@
 # General Info
 Flash Cards client is the client version of the flashcards project. <br/>
 This is a side project done after working hours. <br/>
-The project is for learning skills.
+The project is for learning skills. <br/>
+The project has an administrator panel where you can create content for the website. <br/>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+# Live app
+The application is deployed. You can test it here -> <a href="https://flash-cards-client.herokuapp.com/">link</a>.
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 # Project Setup
 Copy project from github to your pc using command below. <br/>
 Then install and run it locally.
@@ -44,6 +50,7 @@ npm start
 You can use ready user to test app. <br />
 login: <b>user</b> <br />
 password: <b>user</b>
+
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 # Technologies
 Project is created with:
