@@ -29,6 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier src -check",
+    "lint": "eslint src --color",
     "lint-staged": "lint-staged --config lint-staged.js",
     "husky-install": "husky install",
     "eslint": "eslint **/*.js"
