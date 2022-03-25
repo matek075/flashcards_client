@@ -32,7 +32,8 @@
     "lint": "eslint src --color",
     "lint-staged": "lint-staged --config lint-staged.js",
     "husky-install": "husky install",
-    "eslint": "eslint **/*.js"
+    "eslint": "eslint **/*.js",
+    "prepare": "husky install"
   },
   "browserslist": [
     ">0.3%",
@@ -49,7 +50,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.19.1",
     "style-loader": "^2.0.0"
@@ -62,7 +63,20 @@
   "lint-staged": {
     "*.js": [
       "prettier --config .prettierrc --write",
-      "eslint --fix"
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   }
 }
