@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.6.0",
     "classnames": "^2.2.6",
+    "inquirer": "^6.3.1",
     "jwt-decode": "^2.2.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -26,7 +27,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier src -check",
+    "lint": "eslint src --color",
+    "lint-staged": "lint-staged --config lint-staged.js",
+    "husky-install": "husky install",
+    "eslint": "eslint **/*.js",
+    "prepare": "husky install"
   },
   "browserslist": [
     ">0.3%",
@@ -43,20 +50,33 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "husky": "^7.0.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.19.1",
     "style-loader": "^2.0.0"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "*.js": [
       "prettier --config .prettierrc --write",
-      "eslint --fix"
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   }
 }

@@ -1,52 +1,47 @@
-// {
-//   "extends": [
-//     "airbnb",
-//     "prettier",
-//     "prettier/react"
-//   ],
-//   "parser": "babel-eslint",
-//   "env": {
-//     "jest": true
-//   },
-//   "globals": {
-//     "document": true,
-//     "fetch": true,
-//     "window": true,
-//     "localStorage": true
-//   },
-//   "rules": {
-//     "no-underscore-dangle": [
-//       2,
-//       {
-//         "allow": [
-//           "_id"
-//         ]
-//       }
-//     ],
-//     "react/jsx-props-no-spreading": 0,
-//     "import/no-extraneous-dependencies": 0,
-//     "react/jsx-filename-extension": [
-//       1,
-//       {
-//         "extensions": [
-//           ".js"
-//         ]
-//       }
-//     ]
-//   },
-//   "settings": {
-//     "import/resolver": {
-//       "node": {
-//         "paths": [
-//           "./src"
-//         ],
-//         "extensions": [
-//           ".js",
-//           ".jsx",
-//           ".ts",
-//           ".tsx"
-//         ]
-//       }
-//     }
-//   }
-// }
+{
+  "extends": [
+      "airbnb",
+      "prettier",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+      "jest": true
+  },
+  "globals": {
+      "alert": true,
+      "document": true,
+      "window": true,
+      "localStorage": true,
+      "sessionStorage": true
+  },
+  "root": true,
+  "plugins": [
+      "react",
+      "jsx-a11y",
+      "import"
+  ],
+  "rules": {
+      "no-underscore-dangle": "off",
+      "import/prefer-default-export": 0,
+      "import/no-extraneous-dependencies": [
+          "error", {"devDependencies": true}
+      ],
+      "react/jsx-filename-extension": [
+          1,
+          {
+              "extensions": [
+                  ".js"
+              ]
+          }
+      ],
+  },
+  "settings": {
+      "import/resolver": {
+        "node": {
+          "moduleDirectory": ["node_modules", "src/"]
+        }
+      }
+    }
+}

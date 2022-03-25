@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './index.module.scss';
-import Auth from '../../utils/auth'
+import Auth from '../../api/authApi'
 import Square from '../../components/square/index';
 import { NavLink } from 'react-router-dom';
 import learnIcon from '../../utils/icons/learn_icon.png';

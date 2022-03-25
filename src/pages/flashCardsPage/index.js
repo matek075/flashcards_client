@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './index.module.scss';
-import FlashCardsApi from '../../utils/flashCardsApi';
+import FlashCardsApi from '../../api/flashCardsApi';
 import FlashCardContainer from '../../components/flash_card_container';
 import Background from '../../components/background';
 import Header from '../../components/header';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import UserApi from '../../utils/usersApi';
+import UserApi from '../../api/usersApi';
 import Spinner from 'react-bootstrap/Spinner';
 import Background from '../../components/background';
 import Form from '../../components/form/';

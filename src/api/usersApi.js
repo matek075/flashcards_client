@@ -1,4 +1,4 @@
-import Auth from './auth'
+import Auth from './authApi'
 import {url_userLogin, url_userRegister,url_userCode,url_userDeleteDatabase,url_userGetAll,url_userGetOne} from './url.js'
 
 const token = Auth.getToken()
@@ -121,7 +121,7 @@ export default class UsersApi{
           if(res.ok){
               return res.json()
           }else{
-            reject({message:'Błąd - status: ' + res.status})
+               reject({message:'Błąd - status: ' + res.status})
           }
       })
       .then(data =>{
