@@ -1,21 +1,18 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import UserApi from '../utils/usersApi'
+import UserApi from '../api/usersApi'
 
-import StartingPage from '../pages/starting_page/'
-import FlashCardsSectionPage from '../pages/learn_page/'
-import quizSectionPage from '../pages/quizSection_page/'
-import QuizPage from '../pages/quiz_page'
+import QuizPage from './quizPage'
 import NotFoundPage from './notFoundPage/index'
-import FlashCardsPage from './flash_cards_page'
+import FlashCardsPage from './flashCardsPage'
 
-import PublicRoute from '../components/routes/publicRoute/index.js';
-import PrivateAdminRoute from '../components/routes/privateAdminRoute';
-import PrivateUserRoute from '../components/routes/privateUserRoute';
+import PublicRoute from '../routes/publicRoute/index.js';
+import PrivateAdminRoute from '../routes/privateAdminRoute';
+import PrivateUserRoute from '../routes/privateUserRoute';
 
-import { RoutesData } from './_routes_data_/index.js';
+import { RoutesData } from '../routes/_routes_data_/index.js';
 
-import Auth from '../utils/auth';
+import Auth from '../api/authApi';
 import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import {
@@ -38,15 +35,17 @@ const App = () => {
         }
       });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, []);
 
   let getPublicRoutes = () =>
     RoutesData.publicRoute.map((route, i) => {
+      if(route.exact) return <PublicRoute exact path={route.path} component={route.component} />;
       return <PublicRoute path={route.path} component={route.component} />;
     });
   let getPrivateRoutes = () =>
     RoutesData.privateUserRoute.map((route, i) => {
+      if(route.exact) return <PrivateUserRoute exact path={route.path} component={route.component} />;
       return <PrivateUserRoute path={route.path} component={route.component} />;
     });
   let getAdminRoutes = () =>
@@ -67,10 +66,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <PublicRoute exact path="/" component={StartingPage} />
-        <PrivateUserRoute exact path="/learn/" component={FlashCardsSectionPage} />
         <Route path="/learn/:languageType" children={<FlashCardsPage />} />
-        <PrivateUserRoute exact path="/quiz/" component={quizSectionPage} />
         <Route path="/quiz/:languageType" children={<QuizPage />} />
         {getRoutes()}
         <Route component={NotFoundPage} />

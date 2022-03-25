@@ -1,4 +1,4 @@
-import Auth from './auth'
+import Auth from './authApi'
 import {url_getByType, url_createOne} from './url.js'
 
 const token = Auth.getToken()

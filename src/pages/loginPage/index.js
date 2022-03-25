@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styles from './index.module.scss'
-import UserApi from '../../utils/usersApi';
+import UserApi from '../../api/usersApi';
 import Background from '../../components/background';
 import Form from '../../components/form/';
 import Input from '../../components/input/';
 import Button from '../../components/button/';
 import Spinner from 'react-bootstrap/Spinner';
 import AlertComponent from '../../components/alert/';
-import Auth from '../../utils/auth';
+import Auth from '../../api/authApi';
 import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import {

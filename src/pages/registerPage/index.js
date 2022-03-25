@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './index.module.scss'
-import UserApi from '../../utils/usersApi';
+import UserApi from '../../api/usersApi';
 import Background from '../../components/background';
 import Form from '../../components/form/';
 import Input from '../../components/input/';

@@ -4,7 +4,7 @@ import Background from '../../components/background/';
 import NavBar from '../../components/nav_bar/';
 import Button from '../../components/button/';
 import { Person } from '@styled-icons/ionicons-solid/Person';
-import Auth from '../../utils/auth';
+import Auth from '../../api/authApi';
 
 const PersonIcon = styled(Person)`
   height: 100%;

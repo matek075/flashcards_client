@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './index.module.scss';
-import FlashCardsApi from '../../utils/flashCardsApi';
+import FlashCardsApi from '../../api/flashCardsApi';
 import Form from 'react-bootstrap/Form';
 import Button from '../../components/button/';
 import Spinner from 'react-bootstrap/Spinner';
 import AlertComponent from '../../components/alert/';
 import Background from '../../components/background';
-import Auth from '../../utils/auth';
+import Auth from '../../api/authApi';
 
 
 const AdminPage = () => {
