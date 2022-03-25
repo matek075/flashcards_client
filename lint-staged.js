@@ -4,5 +4,5 @@ module.exports = {
         'react-scripts test --bail --watchAll=false --findRelatedTests --passWithNoTests',
         () => 'tsc-files --noEmit',
     ],
-    '*.{js,jsx,ts,tsx,json,css,js}': ['prettier --write'],
+    '*.{js,jsx,ts,tsx,json,css,js}': ['prettier --single-quote --write', 'git add'],
 }
