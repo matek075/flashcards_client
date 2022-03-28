@@ -1,15 +1,15 @@
-import StartingPage from '../../pages/starting_page'
-import LoginPage from '../../pages/login_page';
-import CodePage from '../../pages/code_page';
-import RegisterPage from '../../pages/register_page';
+import StartingPage from '../../pages/startingPage'
+import LoginPage from '../../pages/loginPage';
+import CodePage from '../../pages/codePage';
+import RegisterPage from '../../pages/registerPage';
 
 import HomePage from '../../pages/homePage/index';
-import OptionPage from '../../pages/option_page';
-import ProfilePage from '../../pages/profile_page';
+import OptionPage from '../../pages/optionPage';
+import ProfilePage from '../../pages/profilePage';
 import FlashCardsSectionPage from '../../pages/learnPage'
 import QuizSectionPage from '../../pages/quizSectionPage'
 
-import AdminPage from '../../pages/adminPanel_page';
+import AdminPage from '../../pages/adminPanelPage';
 
 export const RoutesData = {
   publicRoute: [
