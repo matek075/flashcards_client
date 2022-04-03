@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './index.module.scss';
-import Auth from '../../api/authApi'
-import Square from '../../components/square/index';
+import Auth from '../../../api/authApi';
+import Square from '../../atoms/Square/Square';
 import { NavLink } from 'react-router-dom';
-import learnIcon from '../../utils/icons/learn_icon.png';
-import questionIcon from '../../utils/icons/question_icon.png';
-import profileIcon from '../../utils/icons/profile_icon.png';
-import homeIcon from '../../utils/icons/home_icon.png';
-import exitIcon from '../../utils/icons/exit_icon.png';
+import learnIcon from '../../../utils/icons/learn_icon.png';
+import questionIcon from '../../../utils/icons/question_icon.png';
+import profileIcon from '../../../utils/icons/profile_icon.png';
+import homeIcon from '../../../utils/icons/home_icon.png';
+import exitIcon from '../../../utils/icons/exit_icon.png';
 
 const NavBar = () => {
   function logOut() {

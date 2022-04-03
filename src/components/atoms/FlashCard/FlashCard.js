@@ -10,12 +10,11 @@ const FlashCard = ({ card }) => {
   return (
     <div className={styles.deck}>
       <div className={styles.card}>
-        {isFlipped ?
-        (
+        {isFlipped ? (
           <div className={`${styles.front} ${styles.face}`} onClick={e => flipCardToBackground(e)}>
             <h2>{card.question}</h2>
           </div>
-         ): (
+        ) : (
           <div className={`${styles.back} ${styles.face}`} onClick={e => flipCardToBackground(e)}>
             <h2>{card.answear}</h2>
           </div>

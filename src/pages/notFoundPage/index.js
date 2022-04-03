@@ -1,5 +1,5 @@
 import React from 'react';
-import Background from '../../components/background';
+import Background from '../../components/atoms/Background/Background';
 import classes from './index.module.scss';
 const NotFoundPage = () => {
   return (

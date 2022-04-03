@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import styles from './index.module.scss'
+import styles from './index.module.scss';
 import UserApi from '../../api/usersApi';
-import Background from '../../components/background';
-import Form from '../../components/form/';
-import Input from '../../components/input/';
-import Button from '../../components/button/';
+import Background from '../../components/atoms/Background/Background';
+import Form from '../../components/molecules/Form/Form';
+import Input from '../../components/atoms/Input/Input';
+import Button from '../../components/atoms/Button/Button';
 import Spinner from 'react-bootstrap/Spinner';
-import AlertComponent from '../../components/alert/';
+import Alert from '../../components/atoms/Alert/Alert';
 
 const RegisterPage = props => {
   const [state, setState] = useState({
@@ -64,23 +64,11 @@ const RegisterPage = props => {
       <Form onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
           <label className={styles.label}>name</label>
-          <Input
-            type="text"
-            name="username"
-            onChange={handleChange}
-            value={state.username}
-            placeholder="👱name"
-          />
+          <Input type="text" name="username" onChange={handleChange} value={state.username} placeholder="👱name" />
         </div>
         <div className={styles.inputGroup}>
           <label className={styles.label}>email</label>
-          <Input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            value={state.email}
-            placeholder="📧email"
-          />
+          <Input type="email" name="email" onChange={handleChange} value={state.email} placeholder="📧email" />
         </div>
         <div className={styles.inputGroup}>
           <label className={styles.label}>password</label>
@@ -104,15 +92,8 @@ const RegisterPage = props => {
         </div>
 
         <Button text={'Register'} />
-        {alert !== '' ? (
-          <AlertComponent
-            text={alert}
-            onClose={() => setAlert('')}
-          ></AlertComponent>
-        ) : null}
-        {state.spinner === true && (
-          <Spinner animation="border" variant="primary" />
-        )}
+        {alert !== '' ? <Alert text={alert} onClose={() => setAlert('')}></Alert> : null}
+        {state.spinner === true && <Spinner animation="border" variant="primary" />}
       </Form>
     </Background>
   );

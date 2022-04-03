@@ -17,10 +17,7 @@ export default class Auth{
         let token = this.getToken()
         if(!this.tokenExist()) return false
         let decoded = decode(token)
-        if(decoded.exp > (Date.now() / 1000))
-            return true
-        else
-            return false
+        return decoded.exp > (Date.now() / 1000)
     }
     static getUserId(){
         let token = this.getToken()

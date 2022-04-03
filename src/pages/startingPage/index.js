@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './index.module.scss';
-import Button from '../../components/button/';
-import Background from '../../components/background/';
-import Logo from '../../utils/icons/logo'
+import Button from '../../components/atoms/Button/Button';
+import Background from '../../components/atoms/Background/Background';
+import Logo from '../../utils/icons/logo';
 
 const StartingPage = () => {
   return (

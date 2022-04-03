@@ -1,7 +1,7 @@
 import React from 'react';
-import NavBar from '../../components/nav_bar/index';
+import NavBar from '../../components/molecules/Navbar/Navbar';
 import styles from './index.module.scss';
-import Background from '../../components/background';
+import Background from '../../components/atoms/Background/Background';
 
 const HomePage = () => {
   return (
