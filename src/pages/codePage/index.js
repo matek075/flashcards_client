@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import UserApi from '../../api/usersApi';
 import Spinner from 'react-bootstrap/Spinner';
-import Background from '../../components/background';
-import Form from '../../components/form/';
-import Input from '../../components/input/';
-import Button from '../../components/button/';
-import AlertComponent from '../../components/alert/';
+import Background from '../../components/atoms/Background/Background';
+import Form from '../../components/molecules/Form/Form';
+import Input from '../../components/atoms/Input/Input';
+import Button from '../../components/atoms/Button/Button';
+import Alert from '../../components/atoms/Alert/Alert';
 
 const CodePage = props => {
   const [state, setState] = useState({
@@ -44,24 +44,11 @@ const CodePage = props => {
   return (
     <Background width="100%">
       <Form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          name="code"
-          onChange={handleChange}
-          value={state.code}
-          placeholder="code"
-        />
+        <Input type="text" name="code" onChange={handleChange} value={state.code} placeholder="code" />
         <Button text={'Send code'} />
 
-        {alert !== '' ? (
-          <AlertComponent
-            text={alert}
-            onClose={() => setAlert('')}
-          ></AlertComponent>
-        ) : null}
-        {state.spinner === true && (
-          <Spinner animation="border" variant="primary" />
-        )}
+        {alert !== '' ? <Alert text={alert} onClose={() => setAlert('')}></Alert> : null}
+        {state.spinner === true && <Spinner animation="border" variant="primary" />}
       </Form>
     </Background>
   );

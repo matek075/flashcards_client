@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './index.module.scss';
 import FlashCardsApi from '../../api/flashCardsApi';
-import FlashCardContainer from '../../components/flash_card_container';
-import Background from '../../components/background';
-import Header from '../../components/header';
+import FlashCardContainer from '../../components/molecules/FlashCardContainer/FlashCardContainer';
+import Background from '../../components/atoms/Background/Background';
+import Header from '../../components/atoms/Header/Header';
 
 const FlashCardsPage = () => {
   const [state, setState] = useState({
@@ -32,7 +32,12 @@ const FlashCardsPage = () => {
     return (
       <Background width="100%">
         <Header text={`Welcome in ${languageType} section`} />
-        <span className={styles.backText} onClick={()=>window.history.back()}><span role="img" aria-label="back">◀️</span> powrot</span>
+        <span className={styles.backText} onClick={() => window.history.back()}>
+          <span role="img" aria-label="back">
+            ◀️
+          </span>{' '}
+          powrot
+        </span>
         <FlashCardContainer flashCardCollection={data} />
       </Background>
     );

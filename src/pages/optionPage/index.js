@@ -1,6 +1,6 @@
 import React from 'react';
-import Background from '../../components/background/';
-import NavBar from '../../components/nav_bar/index';
+import Background from '../../components/atoms/Background/Background';
+import NavBar from '../../components/molecules/Navbar/Navbar';
 
 const OptionPage = () => {
   return (

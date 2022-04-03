@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Background from '../../components/background/';
-import NavBar from '../../components/nav_bar/';
-import Button from '../../components/button/';
+import Background from '../../components/atoms/Background/Background';
+import NavBar from '../../components/molecules/Navbar/Navbar';
+import Button from '../../components/atoms/Button/Button';
 import { Person } from '@styled-icons/ionicons-solid/Person';
 import Auth from '../../api/authApi';
 
